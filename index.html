@@ -38,6 +38,7 @@
           <button class="glide__bullet" data-glide-dir="=0"></button>
           <button class="glide__bullet" data-glide-dir="=1"></button>
           <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
         </div>
       </div>
       <a href="#segundaSection"><img src="./icons/rowDown.svg" alt=""></a>
@@ -56,8 +57,8 @@
         <h3 class="details-heading">Lugar</h3>
         <p><a rel="noopener" href="https://maps.app.goo.gl/PPQguQJhsjncFCVt5">Campaments L'Arcada</a></p>
         <iframe
-          width="auto"
-          height="auto"
+          width="50%"
+          height="fit-content"
           style="border:0"
           loading="lazy"
           allowfullscreen
@@ -95,7 +96,6 @@
       focusAt: 'center',
       keyboard: true, 
     }).mount()
-
     document.addEventListener("DOMContentLoaded", () => {
       confetti({
         particleCount: 1500,
