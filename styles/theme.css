@@ -1,12 +1,13 @@
 *{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    color: #222;
 }
 html, body{
     margin: 0;
     height: 100vh;
     text-align: center;
+    scroll-behavior: smooth;
+    background-color: C4D9FF;
 }
 .header{
     background-image: url(../img/messi.jpg);
@@ -58,6 +59,7 @@ html, body{
     background: rgba(20,20,20,.9);
 }
 .section{
+    height: 100vh;
     margin: 0 auto;
     /* max-width: 600px; */
     padding: 1em 2.4em;
