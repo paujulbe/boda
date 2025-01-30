@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body onload="location.href='#inicio'">
     <!-- SECCIÓN 1 -->
-    <header class="header">
+    <header class="header" id="inicio">
       <h1 class="heading">
         Pau & Ana
         <span class="heading-subtext">¡ Nos casamos ! <br>
-          <a href="#carousel"><img src="./icons/rowDown.svg" alt=""></a>
+          <a href="#carousel"><img src="./icons/flecha.png" class="row"></a>
         </span>
       </h1>
     </header>
@@ -26,6 +26,7 @@
     <section id="carousel" class="section">
       <h2 class="sub-heading">Overview</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis ab harum voluptatem non dolorem atque vel adipisci. A aut unde alias architecto nihil adipisci similique enim natus quaerat impedit.</p>
+      <div class="contenedorCarousel">
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -44,6 +45,7 @@
           <button class="glide__bullet" data-glide-dir="=4"></button>
         </div>
       </div>
+    </div>
     </section>
     <!-- SECCIÓN 3 -->
     <section class="section" id="details">
@@ -105,7 +107,7 @@
       });
 
       confetti({
-        particleCount: 1500,
+        particleCount: 1000,
         spread: 10000,
         origin: { x: 0, y: 0.9 },
       });

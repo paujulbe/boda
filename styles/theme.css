@@ -8,9 +8,16 @@ html, body{
     text-align: center;
     scroll-behavior: smooth;
     background-color: C4D9FF;
+    /* Impedeix el scroll lateral */
+    overflow-x: hidden; 
+    width: 100vw; 
+
 }
 img{
     max-width: 50%;
+}
+p{
+    margin: 2em 2em;
 }
 .header{
     background-image: url(../img/main2.png);
@@ -65,15 +72,12 @@ img{
     height: 100vh;
     margin: 0 auto;
     /* max-width: 600px; */
-    padding: 1em 2.4em;
+    padding: 1em 0;
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
     font-size: 3em;
-    margin-top: 2em;
-}
-.divPadre {
-    background-color: beige;
+    margin-top: 0.5em;
 }
 .details{
     margin: 0 auto 8em;
@@ -89,10 +93,19 @@ img{
 .resort-image{
     width: 100%
 }
+.row{
+    width: 5%;
+}
 
-
+/* Per movils */
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 4em;
+    }
+    .row{
+        width: 15%;
+    }
+    img{
+        max-width: 100%;
     }
   }
