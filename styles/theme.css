@@ -14,7 +14,7 @@ html, body{
 
 }
 img{
-    max-width: 50%;
+    max-width: 20%;
 }
 p{
     margin: 2em 2em;
@@ -96,6 +96,10 @@ p{
 .row{
     width: 5%;
 }
+.black_row{
+    margin-top: 3%;
+    width: 1%;
+}
 
 /* Per movils */
 @media only screen and (max-width: 600px) {
@@ -105,7 +109,11 @@ p{
     .row{
         width: 15%;
     }
+    .black_row{
+        margin-top: 3%;
+        width: 5%;
+    }
     img{
-        max-width: 100%;
+        max-width: 65%;
     }
   }
