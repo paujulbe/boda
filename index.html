@@ -12,6 +12,7 @@
     <!-- Optional Theme Stylesheet -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://apis.google.com/js/api.js"></script>
   </head>
   <body onload="location.href='#inicio'">
     <!-- SECCIÓN 1 -->
@@ -55,7 +56,8 @@
         <i class="fas fa-calendar-check"></i>
         <h3 class="details-heading">Cuándo</h3>
         <p>26 de Abril 2025</p>
-        <a title="Add to Calendar" rel="noopener" href="#" target="_blank" rel="nofollow">Add to Calendar</a>
+        <button class="button-74" id="add-event">Add to calendar</button>
+
       </div>
       <div class="details">
         <i class="fas fa-map-marked-alt"></i>
@@ -82,6 +84,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+
       // Detectar si es un dispositivo móvil
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
   
@@ -116,5 +119,25 @@
         });
       }
     });
+
+    const event = {
+      text: 'Boda Pau y Ana',
+      dates: '20250426T150000Z/20250426T220000Z',
+      details: '¡Nos casamos! ¡No te lo pierdas!',
+      location: "L'Arcada Campaments, Sant Miquel de campajor, Girona, España",
+   };
+
+    const generateCalendarURL = (event) => {
+     return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+           `&text=${encodeURIComponent(event.text)}` +
+           `&dates=${encodeURIComponent(event.dates)}` +
+           `&details=${encodeURIComponent(event.details)}` +
+           `&location=${encodeURIComponent(event.location)}`;
+  };
+
+  document.getElementById('add-event').addEventListener('click', () => {
+    const calendarURL = generateCalendarURL(event);
+    window.open(calendarURL, '_blank');
+  });
   </script>  
 </html>
