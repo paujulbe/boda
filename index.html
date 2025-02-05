@@ -85,17 +85,15 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
 
-      // Detectar si es un dispositivo móvil
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
   
-      // Configuración dinámica para Glide
       const glideOptions = {
         type: 'carousel',
         autoplay: 3000,
         focusAt: 'center',
         keyboard: true,
-        gap: isMobile ? 100 : 0, // Gaps más pequeños en móviles
-        perView: isMobile ? 2 : 2 , // 1 elemento visible en móvil, 3 en desktop
+        gap: isMobile ? 100 : 30, 
+        perView: isMobile ? 2 : 2 , 
       };
   
       new Glide('.glide', glideOptions).mount();
