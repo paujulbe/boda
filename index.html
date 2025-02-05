@@ -19,14 +19,13 @@
       <h1 class="heading">
         Pau & Ana
         <span class="heading-subtext">¡ Nos casamos ! <br>
-          <a href="#carousel"><img src="./icons/flecha.png" class="row"></a>
         </span>
       </h1>
     </header>
     <!-- SECCIÓN 2 -->
     <section id="carousel" class="section">
       <h2 class="sub-heading">Overview</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis ab harum voluptatem non dolorem atque vel adipisci. A aut unde alias architecto nihil adipisci similique enim natus quaerat impedit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis ab harum voluptatem non dolorem atque vel adipisci.</p>
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -45,11 +44,13 @@
           <button class="glide__bullet" data-glide-dir="=4"></button>
         </div>
       </div>
-      <a href="#details"><img src="./icons/flecha_negra.png" class="black_row"></a>
     </section>
     <!-- SECCIÓN 3 -->
     <section class="section" id="details">
-      <h2 class="sub-heading">Detalles</h2>
+      <h2 class="sub-heading">Por favor, rellena formulario</h2>
+      <div class="details">
+        <button class="button-74" role="button">Formulario</button>
+      </div>
       <div class="details">
         <i class="fas fa-calendar-check"></i>
         <h3 class="details-heading">Cuándo</h3>
@@ -61,56 +62,59 @@
         <h3 class="details-heading">Lugar</h3>
         <p><a rel="noopener" href="https://maps.app.goo.gl/PPQguQJhsjncFCVt5">Campaments L'Arcada</a></p>
         <iframe
-          width="50%"
+          width="70%"
           height="fit-content"
           style="border:0"
           loading="lazy"
-          allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BkuWHKXlOpppuNESIArQ7kOyMdoYk7E&q=Paratge Can Goday s/n, 17831 Sant Miquel de Campmajor, Girona, España">
         </iframe>
-      </section>
-      </div>
-        <div class="details">
-          <i class="fas fa-suitcase"></i>
-          <h3 class="details-heading">Rellena formulario</h3>
-          <p><a rel="noopener" href="#">Formulario</a></p>
-        </div>
         <div class="details">
           <i class="fas fa-plane-departure"></i>
           <h3 class="details-heading">PAGA</h3>
           <p>Si comes, pagas</p>
           <p>Numero de cuenta?</p>
         </div>
-        <div class="details">
-          <i class="fas fa-asterisk"></i>
-          <h3 class="details-heading">Otros</h3>
-          <p>bla bla</p>
-        </div>
-    
+      </section>
+      </div>
   </body>
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <script>
-    new Glide('.glide', { 
-      type: 'carousel',
-      perView: 1,
-      autoplay: 5000,
-      focusAt: 'center',
-      keyboard: true, 
-    }).mount()
     document.addEventListener("DOMContentLoaded", () => {
-      confetti({
-        particleCount: 1500,
-        spread: 10000,
-        origin: { x: 1, y: 0.9 },
-      });
-
-      confetti({
-        particleCount: 1000,
-        spread: 10000,
-        origin: { x: 0, y: 0.9 },
-      });
+      // Detectar si es un dispositivo móvil
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  
+      // Configuración dinámica para Glide
+      const glideOptions = {
+        type: 'carousel',
+        autoplay: 3000,
+        focusAt: 'center',
+        keyboard: true,
+        gap: isMobile ? 100 : 0, // Gaps más pequeños en móviles
+        perView: isMobile ? 2 : 2 , // 1 elemento visible en móvil, 3 en desktop
+      };
+  
+      new Glide('.glide', glideOptions).mount();
+  
+      if (isMobile) {
+        confetti({
+          particleCount: 500,
+          spread: 8000,
+          origin: { x: 0.5, y: 0.9 },
+        });
+      } else {
+        confetti({
+          particleCount: 1600,
+          spread: 10000,
+          origin: { x: 1, y: 0.9 },
+        });
+        confetti({
+          particleCount: 1000,
+          spread: 10000,
+          origin: { x: 0, y: 0.9 },
+        });
+      }
     });
-  </script>
+  </script>  
 </html>

@@ -1,119 +1,158 @@
-*{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-}
-html, body{
-    margin: 0;
-    height: 100vh;
-    text-align: center;
-    scroll-behavior: smooth;
-    background-color: C4D9FF;
-    /* Impedeix el scroll lateral */
-    overflow-x: hidden; 
-    width: 100vw; 
+    *{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+    }
+    html, body{
 
-}
-img{
-    max-width: 20%;
-}
-p{
-    margin: 2em 2em;
-}
-.header{
-    background-image: url(../img/main2.png);
-    background-repeat: no-repeat;
-    background-position: 50% 60%;
-    background-attachment: scroll;
-    background-size: cover;
-    height: 40vh;
-    margin: 0;
-    padding-top: 60vh;
-}
-.heading {
-    color: #ffffff;
-    display: block;
-    font-family: 'Caveat', cursive;
-    font-size: 6em;
-    font-weight: normal;
-    text-shadow: 0 0 10px #000;
-}
-.heading-subtext{
-    color: #fff;
-    display: block;
-    font-family: 'Caveat', cursive;
-    font-size: .6em;
-}
-.fixed-button{
-    background: rgba(20,20,20,.5);
-    border-radius: 1em;
-    bottom: 1em;
-    color: white;
-    font-weight: bold;
-    padding: 1em;
-    position: fixed;
-    right: 1em;
+        margin: 0;
+        height: 100vh;
+        text-align: center;
+        scroll-behavior: smooth;
+        background-color: #faf4eb;
+        overflow-x: hidden; 
+        width: 100vw; 
+
+    }
+    img{
+    max-width: 70%;
+        
+    }
+    p{
+        margin: 2em 2em;
+    }
+    .button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
     text-decoration: none;
-    z-index: 9999;
-}
-.fixed-button::after{
-    content: "\25BE";
-    display: block;
-    font-size: 28px;
-    line-height: 0;
-    margin-bottom: 6px;
-    margin-top: 10px;
-    text-align: center;
-}
-.fixed-button:active,
-.fixed-button:hover{
-    background: rgba(20,20,20,.9);
-}
-.section{
-    height: 100vh;
-    margin: 0 auto;
-    /* max-width: 600px; */
-    padding: 1em 0;
-}
-.sub-heading{
-    font-family: 'Caveat', cursive;
-    font-size: 3em;
-    margin-top: 0.5em;
-}
-.details{
-    margin: 0 auto 8em;
-}
-.details-heading{
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.fas {
-    font-size: 3em;
-    opacity: .8;
-}
-.resort-image{
-    width: 100%
-}
-.row{
-    width: 5%;
-}
-.black_row{
-    margin-top: 3%;
-    width: 1%;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+.button-74:hover {
+  background-color: #fff;
 }
 
-/* Per movils */
-@media only screen and (max-width: 600px) {
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+    .header{
+        position: relative; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        background-image: url(/img/main2.png);
+        background-size: cover; 
+        background-position: center;
+        text-align: center; 
+    }
     .heading {
-        font-size: 4em;
+        color: #ffffff;
+        font-family: 'Caveat', cursive;
+        font-size: 6em;
+        font-weight: normal;
+        text-shadow: 0 0 10px #000;
+        margin-top: 20%;
+    }
+    .heading-subtext{
+        color: #fff;
+        display: block;
+        font-family: 'Caveat', cursive;
+        font-size: .6em;
+    }
+    .fixed-button{
+        background: rgba(20,20,20,.5);
+        border-radius: 1em;
+        bottom: 1em;
+        color: white;
+        font-weight: bold;
+        padding: 1em;
+        position: fixed;
+        right: 1em;
+        text-decoration: none;
+        z-index: 9999;
+    }
+    .fixed-button::after{
+        content: "\25BE";
+        display: block;
+        font-size: 28px;
+        line-height: 0;
+        margin-bottom: 6px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .fixed-button:active,
+    .fixed-button:hover{
+        background: rgba(20,20,20,.9);
+    }
+    .section{
+        height: 65vh;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .sub-heading{
+        font-family: 'Caveat', cursive;
+        font-size: 3em;
+        margin-top: 0.5em;
+    }
+    .details{
+        margin: 0 auto 8em;
+    }
+    .details-heading{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .fas {
+        font-size: 3em;
+        opacity: .8;
+    }
+    .resort-image{
+        width: 100%
     }
     .row{
-        width: 15%;
+        width: 5%;
     }
     .black_row{
         margin-top: 3%;
-        width: 5%;
+        width: 1%;
     }
-    img{
-        max-width: 65%;
+    /* Per movils */
+    @media only screen and (max-width: 600px) {
+        .header{
+            height: 40vh;
+        }
+        .heading {
+            font-size: 3em;
+            margin-top: 50%;
+            
+        }
+        .row{
+            width: 15%;
+        }
+        .black_row{
+            margin-top: 3%;
+            width: 5%;
+        }
+        img{
+            max-width: 150%;
+        }
     }
-  }
