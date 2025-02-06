@@ -33,7 +33,20 @@ p {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.responsive-iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 .button-74:hover {
   background-color: #fff;
 }
@@ -110,7 +123,8 @@ p {
   margin-top: 0.5em;
 }
 .details {
-  margin: 0 auto 8em;
+  margin: 1em auto 5em;
+  padding: 1em;
 }
 .details-heading {
   font-weight: bold;
