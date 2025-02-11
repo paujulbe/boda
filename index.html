@@ -28,8 +28,13 @@
     </header>
     <!-- SECCIÓN 2 -->
     <section id="carousel" class="section">
-      <h2 class="sub-heading">Overview</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis ab harum voluptatem non dolorem atque vel adipisci.</p>
+      <h2 class="sub-heading">¡Esto es para ti!</h2>
+      <p>Estamos súper felices de que vayas a compartir con nosotros el dia más importante y emocionante de nuestras vidas!
+        <br>Si has recibido esta invitación es porque realmente eres una persona importante, y no podriamos imaginar este día sin ti. 
+        <br>¡Gracias por estar a nuestro lado!
+        <br>
+        Aquí tienes un pequeño adelanto de lo que te espera... ¡Esperamos que te guste!
+      </p>
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -54,7 +59,7 @@
       <h2 class="sub-heading">Asistencia</h2>
       <p>Por favor, rellena el formulario para confirmar asistencia</p>
       <div class="details">
-        <button class="button-74" role="button">Formulario</button>
+        <button class="button-74" role="button" id="form">Formulario</button>
       </div>
       <div class="details">
         <i class="fas fa-calendar-check"></i>
@@ -77,10 +82,12 @@
         </div>  
         </iframe>
         <div class="details">
-          <i class="fas fa-plane-departure"></i>
-          <h3 class="details-heading">PAGA</h3>
-          <p>Si comes, pagas</p>
-          <p>Numero de cuenta?</p>
+          <i class="fas fa-question-circle"></i>
+          <h3 class="details-heading">Nos puedes ayudar :)</h3>
+          <p>Si quieres ayudarnos en lo económico, nosotros preferimos que ingreses aquello que tengas en tu corazón en este número de cuenta</p>
+          <strong>ES28 1465 0100 91 1762545689</strong>
+          <p>Pero si tu ilusión es regalarnos algo físico aquí te dejamos nuestra lista de deseos de amazon</p>
+          <button class="button-74" id="amazon">Lista Amazon</button>
         </div>
       </section>
       </div>
@@ -88,6 +95,13 @@
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <script>
+    document.getElementById('amazon',).addEventListener('click', () => {
+      window.open("https://www.amazon.es/hz/wishlist/ls/311IHY455T9WA?ref_=wl_share")
+    });
+    document.getElementById('form',).addEventListener('click', () => {
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdfd6FbgoX3PHxVi7Ush7xkvn8oTgskfZgpBppKB3DInNCUoQ/viewform")
+    });
+
     document.body.addEventListener('click', () => {
       const music = document.getElementById('backgroundMusic');
       music.play();

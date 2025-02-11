@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Athena;
+  src: url("../fonts/athena.ttf");
+}
+
 * {
-  font-family: "Quicksand", sans-serif;
+  
+  font-family: "Athena" ;
   font-size: 16px;
 }
 html,
@@ -75,7 +81,7 @@ p {
 }
 .heading {
   color: #ffffff;
-  font-family: "Caveat", cursive;
+  font-family: "Athena", cursive;
   font-size: 6em;
   font-weight: normal;
   text-shadow: 0 0 10px #000;
@@ -84,7 +90,7 @@ p {
 .heading-subtext {
   color: #fff;
   display: block;
-  font-family: "Caveat", cursive;
+  font-family: "Athena", cursive;
   font-size: 0.6em;
 }
 .fixed-button {
@@ -118,8 +124,8 @@ p {
   padding: 0;
 }
 .sub-heading {
-  font-family: "Caveat", cursive;
-  font-size: 3em;
+  font-family: "Athena", cursive;
+  font-size: 2em;
   margin-top: 0.5em;
 }
 .details {
