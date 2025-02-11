@@ -15,6 +15,9 @@
     <script src="https://apis.google.com/js/api.js"></script>
   </head>
   <body onload="location.href='#inicio'">
+    <audio id="backgroundMusic" loop>
+      <source src="/audio/audio.mp3" type="audio/mp3">
+    </audio>
     <!-- SECCIÓN 1 -->
     <header class="header" id="inicio">
       <h1 class="heading">
@@ -85,6 +88,10 @@
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <script>
+    document.body.addEventListener('click', () => {
+      const music = document.getElementById('backgroundMusic');
+      music.play();
+    }, { once: true });
     document.addEventListener("DOMContentLoaded", () => {
 
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
