@@ -20,6 +20,7 @@
     </audio>
     <!-- SECCIÓN 1 -->
     <header class="header" id="inicio">
+      <div id="aviso">Toca la pantalla y sube el volumen :)</div>
       <h1 class="heading">
         Pau & Ana
         <span class="heading-subtext">¡ Nos casamos ! <br>
@@ -82,7 +83,7 @@
         </div>  
         </iframe>
         <div class="details">
-          <i class="fas fa-question-circle"></i>
+          <i class="fas fa-question-circle"></i> <!-- fas fa-smile -->
           <h3 class="details-heading">Nos puedes ayudar :)</h3>
           <p>Si quieres ayudarnos en lo económico, nosotros preferimos que ingreses aquello que tengas en tu corazón en este número de cuenta</p>
           <strong>ES28 1465 0100 91 1762545689</strong>
@@ -101,7 +102,10 @@
     document.getElementById('form',).addEventListener('click', () => {
       window.open("https://docs.google.com/forms/d/e/1FAIpQLSdfd6FbgoX3PHxVi7Ush7xkvn8oTgskfZgpBppKB3DInNCUoQ/viewform")
     });
-
+    document.addEventListener("click", function () {
+      document.getElementById("aviso").style.opacity = "0";
+      setTimeout(() => document.getElementById("aviso").remove(), 500);
+  });
     document.body.addEventListener('click', () => {
       const music = document.getElementById('backgroundMusic');
       music.play();

@@ -21,6 +21,19 @@ body {
 p {
   margin: 2em 2em;
 }
+#aviso {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
 .button-74 {
   background-color: #faf4eb;
   border: 2px solid #422800;
@@ -73,7 +86,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 65vh;
   background-image: url(/img/main2.png);
   background-size: cover;
   background-position: center;
@@ -119,7 +132,7 @@ p {
   background: rgba(20, 20, 20, 0.9);
 }
 .section {
-  height: 100vh;
+  height: 105vh;
   margin: 0 auto;
   padding: 0;
 }
@@ -184,7 +197,7 @@ p {
     width: 5%;
   }
   .section{
-    height: 65vh;
+    height: 70vh;
   }
   img {
     max-width: 150%;
