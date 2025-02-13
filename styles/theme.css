@@ -156,8 +156,8 @@ p {
 .resort-image {
   width: 100%;
 }
-/* Per movils */
 
+/* Per Desktop */
 @media only screen and (min-width: 1080px) {
     .glide__slide img {
         display: block;
@@ -174,6 +174,7 @@ p {
       }
 }
 
+/* Per movils */
 @media only screen and (max-width: 768px) {
   .header {
     height: 40vh;
