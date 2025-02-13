@@ -4,10 +4,11 @@
 }
 
 * {
-  
-  font-family: "Athena" ;
+
+  font-family: "Athena";
   font-size: 16px;
 }
+
 html,
 body {
   margin: 0;
@@ -18,9 +19,11 @@ body {
   overflow-x: hidden;
   width: 100vw;
 }
+
 p {
   margin: 2em 2em;
 }
+
 #aviso {
   position: fixed;
   top: 20px;
@@ -34,6 +37,7 @@ p {
   z-index: 1000;
   transition: opacity 0.5s ease-in-out;
 }
+
 .button-74 {
   background-color: #faf4eb;
   border: 2px solid #422800;
@@ -52,12 +56,14 @@ p {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
 .map-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
+
 .responsive-iframe {
   width: 100%;
   max-width: 800px;
@@ -66,6 +72,7 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .button-74:hover {
   background-color: #fff;
 }
@@ -75,12 +82,66 @@ p {
   transform: translate(2px, 2px);
 }
 
+.swiper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.3s;
+}
+
+
 @media (min-width: 768px) {
   .button-74 {
     min-width: 120px;
     padding: 0 25px;
   }
 }
+
 .header {
   position: relative;
   display: flex;
@@ -92,6 +153,7 @@ p {
   background-position: center;
   text-align: center;
 }
+
 .heading {
   color: #ffffff;
   font-family: "Athena", cursive;
@@ -100,12 +162,14 @@ p {
   text-shadow: 0 0 10px #000;
   margin-top: 20%;
 }
+
 .heading-subtext {
   color: #fff;
   display: block;
   font-family: "Athena", cursive;
   font-size: 0.6em;
 }
+
 .fixed-button {
   background: rgba(20, 20, 20, 0.5);
   border-radius: 1em;
@@ -118,6 +182,7 @@ p {
   text-decoration: none;
   z-index: 9999;
 }
+
 .fixed-button::after {
   content: "\25BE";
   display: block;
@@ -127,78 +192,93 @@ p {
   margin-top: 10px;
   text-align: center;
 }
+
 .fixed-button:active,
 .fixed-button:hover {
   background: rgba(20, 20, 20, 0.9);
 }
+
 .section {
   height: 105vh;
   margin: 0 auto;
   padding: 0;
 }
+
 .sub-heading {
   font-family: "Athena", cursive;
   font-size: 2em;
   margin-top: 0.5em;
 }
+
 .details {
   margin: 1em auto 5em;
   padding: 1em;
 }
+
 .details-heading {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .fas {
   font-size: 3em;
   opacity: 0.8;
 }
+
 .resort-image {
   width: 100%;
 }
+
 .row {
   width: 5%;
 }
+
 .black_row {
   margin-top: 3%;
   width: 1%;
 }
+
 /* Per movils */
 
 @media only screen and (min-width: 1080px) {
-    .glide__slide img {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-      }
-      
-      .glide {
-        max-width: 100%;
-        height: 80vh;
-        overflow: hidden;
-      }
+  .swiper__slide img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  .swiper {
+    max-width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .header {
     height: 40vh;
   }
+
   .heading {
     font-size: 3em;
     margin-top: 50%;
   }
+
   .row {
     width: 15%;
   }
+
   .black_row {
     margin-top: 3%;
     width: 5%;
   }
-  .section{
+
+  .section {
     height: 70vh;
   }
+
   img {
     max-width: 150%;
   }

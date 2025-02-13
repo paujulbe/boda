@@ -1,168 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Boda Pau y Ana</title>
-    <link rel="stylesheet" type="text/css" href="./styles/theme.css">
-    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
-    <link rel="icon" href="/img/icono.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
-    <!-- Required Core Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <!-- Optional Theme Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://apis.google.com/js/api.js"></script>
-  </head>
-  <body onload="location.href='#inicio'">
-    <audio id="backgroundMusic" loop>
-      <source src="/audio/audio.mp3" type="audio/mp3">
-    </audio>
-    <!-- SECCIÓN 1 -->
-    <header class="header" id="inicio">
-      <div id="aviso">Toca la pantalla y sube el volumen :)</div>
-      <h1 class="heading">
-        Pau & Ana
-        <span class="heading-subtext">¡ Nos casamos ! <br>
-        </span>
-      </h1>
-    </header>
-    <!-- SECCIÓN 2 -->
-    <section id="carousel" class="section">
-      <h2 class="sub-heading">Nuestra historia</h2>
-      <p>Dios cruzó nuestros caminos hace tres años de manera inesperada para nosotros, y desde entonces, nuestras vidas han sido una aventura increíble. 
-        <br>Después de unos años de risas, desafíos y amor, hemos decidido dar el siguiente paso y unir nuestras vidas en matrimonio. 
-        <br>Creemos que Él ha guiado cada paso de nuestro camino, y estamos agradecidos por su amor y bendición en esta nueva etapa. 
-        <br>Queremos compartir con vosotros este capítulo tan especial de nuestra historia, rodeados de las personas más queridas. 
-        <br>¡Esperamos que estéis con nosotros en este día tan importante!
-      </p>
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide"><img src="./img/foto4.jpeg"></li>
-            <li class="glide__slide"><img src="./img/foto6.jpeg"></li>
-            <li class="glide__slide"><img src="./img/foto2.jpeg"></li>
-            <li class="glide__slide"><img src="./img/foto3.jpeg"></li>
-            <li class="glide__slide"><img src="./img/foto5.jpeg"></li>
-          </ul>
-        </div>
-        <div class="glide__bullets" data-glide-el="controls[nav]">
-          <button class="glide__bullet" data-glide-dir="=0"></button>
-          <button class="glide__bullet" data-glide-dir="=1"></button>
-          <button class="glide__bullet" data-glide-dir="=2"></button>
-          <button class="glide__bullet" data-glide-dir="=3"></button>
-          <button class="glide__bullet" data-glide-dir="=4"></button>
-        </div>
-      </div>
-    </section>
-    <!-- SECCIÓN 3 -->
-    <section class="section" id="details">
-      <h2 class="sub-heading">Asistencia</h2>
-      <p>Por favor, rellena el formulario para confirmar asistencia</p>
-      <div class="details">
-        <button class="button-74" role="button" id="form">Formulario</button>
-      </div>
-      <div class="details">
-        <i class="fas fa-calendar-check"></i>
-        <h3 class="details-heading">Cuándo</h3>
-        <p>26 de Abril 2025</p>
-        <button class="button-74" id="add-event">Añadir al calendario</button>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boda Pau y Ana</title>
+  <link rel="stylesheet" type="text/css" href="./styles/theme.css">
+  <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+  <link rel="icon" href="/img/icono.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+  <!--  Swiper   -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Google API  -->
+  <script src="https://apis.google.com/js/api.js"></script>
+</head>
+
+<body>
+  <audio id="backgroundMusic" loop>
+    <source src="/audio/audio.mp3" type="audio/mp3">
+  </audio>
+  <!-- SECCIÓN 1 -->
+  <header class="header">
+    <div id="aviso">Toca la pantalla y sube el volumen :)</div>
+    <h1 class="heading">
+      Pau & Ana
+      <span class="heading-subtext">¡ Nos casamos ! <br>
+      </span>
+    </h1>
+  </header>
+  <!-- SECCIÓN 2 -->
+  <section id="carousel" class="section">
+    <h2 class="sub-heading">Nuestra historia</h2>
+    <p>Dios cruzó nuestros caminos hace tres años de manera inesperada para nosotros, y desde entonces, nuestras vidas
+      han sido una aventura increíble.
+      <br>Después de unos años de risas, desafíos y amor, hemos decidido dar el siguiente paso y unir nuestras vidas en
+      matrimonio.
+      <br>Creemos que Él ha guiado cada paso de nuestro camino, y estamos agradecidos por su amor y bendición en esta
+      nueva etapa.
+      <br>Queremos compartir con vosotros este capítulo tan especial de nuestra historia, rodeados de las personas más
+      queridas.
+      <br>¡Esperamos que estéis con nosotros en este día tan importante!
+    </p>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Parallax background element -->
+      <div class="parallax-bg" style="background-color:#faf4eb" data-swiper-parallax="-23%"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/foto4.jpeg" alt="Foto 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/foto6.jpeg" alt="Foto 6">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/foto2.jpeg" alt="Foto 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/foto3.jpeg" alt="Foto 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/foto5.jpeg" alt="Foto 5">
+        </div>
       </div>
-      <div class="details">
-        <i class="fas fa-map-marked-alt"></i>
-        <h3 class="details-heading">Lugar</h3>
-        <p>Campaments L'Arcada, Sant Miquel de Campmajor, Banyoles, Girona</p>
-        <div class="map-container">
-          <iframe
-            class="responsive-iframe"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BkuWHKXlOpppuNESIArQ7kOyMdoYk7E&q=Paratge Can Goday s/n, 17831 Sant Miquel de Campmajor, Girona, España">
-          </iframe>
-        </div>  
+      <!-- Pagination (optional) -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </section>
+  <!-- SECCIÓN 3 -->
+  <section class="section" id="details">
+    <h2 class="sub-heading">Asistencia</h2>
+    <p>Por favor, rellena el formulario para confirmar asistencia</p>
+    <div class="details">
+      <button class="button-74" role="button" id="form">Formulario</button>
+    </div>
+    <div class="details">
+      <i class="fas fa-calendar-check"></i>
+      <h3 class="details-heading">Cuándo</h3>
+      <p>26 de Abril 2025</p>
+      <button class="button-74" id="add-event">Añadir al calendario</button>
+
+    </div>
+    <div class="details">
+      <i class="fas fa-map-marked-alt"></i>
+      <h3 class="details-heading">Lugar</h3>
+      <p>Campaments L'Arcada, Sant Miquel de Campmajor, Banyoles, Girona</p>
+      <div class="map-container">
+        <iframe class="responsive-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BkuWHKXlOpppuNESIArQ7kOyMdoYk7E&q=Paratge Can Goday s/n, 17831 Sant Miquel de Campmajor, Girona, España">
         </iframe>
-        <div class="details">
-          <i class="fas fa-question-circle"></i> <!-- fas fa-smile -->
-          <h3 class="details-heading">Nos puedes ayudar :)</h3>
-          <p>Si quieres ayudarnos en lo económico, nosotros preferimos que ingreses aquello que tengas en tu corazón en este número de cuenta</p>
-          <strong>ES28 1465 0100 91 1762545689</strong>
-          <p>Pero si tu ilusión es regalarnos algo físico aquí te dejamos nuestra lista de deseos de amazon</p>
-          <button class="button-74" id="amazon">Lista Amazon</button>
-        </div>
-      </section>
       </div>
-  </body>
-  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-  <script>
-    document.getElementById('amazon',).addEventListener('click', () => {
-      window.open("https://www.amazon.es/hz/wishlist/ls/311IHY455T9WA?ref_=wl_share")
-    });
-    document.getElementById('form',).addEventListener('click', () => {
-      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdfd6FbgoX3PHxVi7Ush7xkvn8oTgskfZgpBppKB3DInNCUoQ/viewform")
-    });
-    document.addEventListener("click", function () {
-      document.getElementById("aviso").style.opacity = "0";
-      setTimeout(() => document.getElementById("aviso").remove(), 500);
+      </iframe>
+      <div class="details">
+        <i class="fas fa-question-circle"></i> <!-- fas fa-smile -->
+        <h3 class="details-heading">Nos puedes ayudar :)</h3>
+        <p>Si quieres ayudarnos en lo económico, nosotros preferimos que ingreses aquello que tengas en tu corazón en
+          este número de cuenta</p>
+        <strong>ES28 1465 0100 91 1762545689</strong>
+        <p>Pero si tu ilusión es regalarnos algo físico aquí te dejamos nuestra lista de deseos de amazon</p>
+        <button class="button-74" id="amazon">Lista Amazon</button>
+      </div>
+  </section>
+  </div>
+</body>
+<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script>
+  document.getElementById('amazon',).addEventListener('click', () => {
+    window.open("https://www.amazon.es/hz/wishlist/ls/311IHY455T9WA?ref_=wl_share")
   });
-    document.body.addEventListener('click', () => {
-      const music = document.getElementById('backgroundMusic');
-      music.play();
-    }, { once: true });
-    document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('form',).addEventListener('click', () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdfd6FbgoX3PHxVi7Ush7xkvn8oTgskfZgpBppKB3DInNCUoQ/viewform")
+  });
+  document.addEventListener("click", function () {
+    document.getElementById("aviso").style.opacity = "0";
+    setTimeout(() => document.getElementById("aviso").remove(), 500);
+  });
+  document.body.addEventListener('click', () => {
+    const music = document.getElementById('backgroundMusic');
+    music.play();
+  }, { once: true });
+  document.addEventListener("DOMContentLoaded", () => {
 
-      const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  
-      const glideOptions = {
-        type: 'carousel',
-        autoplay: 3000,
-        focusAt: 'center',
-        keyboard: true,
-        gap: isMobile ? 100 : 30, 
-        perView: isMobile ? 2 : 2 , 
-      };
-  
-      new Glide('.glide', glideOptions).mount();
-  
-      if (isMobile) {
-        confetti({
-          particleCount: 500,
-          spread: 8000,
-          origin: { x: 0.5, y: 0.9 },
-        });
-      } else {
-        confetti({
-          particleCount: 1600,
-          spread: 10000,
-          origin: { x: 1, y: 0.9 },
-        });
-        confetti({
-          particleCount: 1000,
-          spread: 10000,
-          origin: { x: 0, y: 0.9 },
-        });
-      }
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    const swiper = new Swiper('.swiper', {
+      speed: 1000,
+      spaceBetween: -100, // Superposición para ver la mitad de las fotos laterales
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.5, // Muestra la mitad de las fotos laterales
+      parallax: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+      },
     });
 
-    const event = {
-      text: 'Boda Pau y Ana',
-      dates: '20250426T150000Z/20250426T220000Z',
-      details: '¡Nos casamos! ¡No te lo pierdas!',
-      location: "L'Arcada Campaments, Sant Miquel de campajor, Girona, España",
-   };
+    swiper = document.querySelector('.swiper').swiper;
 
-    const generateCalendarURL = (event) => {
-     return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
-           `&text=${encodeURIComponent(event.text)}` +
-           `&dates=${encodeURIComponent(event.dates)}` +
-           `&details=${encodeURIComponent(event.details)}` +
-           `&location=${encodeURIComponent(event.location)}`;
+    // Now you can use all slider methods like
+    swiper.slideNext();
+
+    if (isMobile) {
+      confetti({
+        particleCount: 500,
+        spread: 8000,
+        origin: { x: 0.5, y: 0.9 },
+      });
+    } else {
+      confetti({
+        particleCount: 1600,
+        spread: 10000,
+        origin: { x: 1, y: 0.9 },
+      });
+      confetti({
+        particleCount: 1000,
+        spread: 10000,
+        origin: { x: 0, y: 0.9 },
+      });
+    }
+  });
+
+  const event = {
+    text: 'Boda Pau y Ana',
+    dates: '20250426T150000Z/20250426T220000Z',
+    details: '¡Nos casamos! ¡No te lo pierdas!',
+    location: "L'Arcada Campaments, Sant Miquel de campajor, Girona, España",
+  };
+
+  const generateCalendarURL = (event) => {
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+      `&text=${encodeURIComponent(event.text)}` +
+      `&dates=${encodeURIComponent(event.dates)}` +
+      `&details=${encodeURIComponent(event.details)}` +
+      `&location=${encodeURIComponent(event.location)}`;
   };
 
   document.getElementById('add-event').addEventListener('click', () => {
     const calendarURL = generateCalendarURL(event);
     window.open(calendarURL, '_blank');
   });
-  </script>  
+</script>
+
 </html>

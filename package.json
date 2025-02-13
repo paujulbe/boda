@@ -1,7 +1,8 @@
 {
     "dependencies": {
-      "@glidejs/glide": "^3.7.1",
-      "dotenv": "^16.4.7",
-      "node": "^22.13.0"
+        "@glidejs/glide": "^3.7.1",
+        "dotenv": "^16.4.7",
+        "node": "^22.13.0",
+        "swiper": "^11.2.3"
     }
-  }
+}
