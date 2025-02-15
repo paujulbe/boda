@@ -191,11 +191,8 @@ p {
   }
 }
 /* Para safari iOS */
-@supports (-webkit-backdrop-filter: none) {
-  .section{
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .section {
     height: 100%;
-  }
-  strong{
-    all: unset;
   }
 }
