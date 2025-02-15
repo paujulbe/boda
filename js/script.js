@@ -1,6 +1,6 @@
 // Botones de la web
 document.getElementById('amazon',).addEventListener('click', () => {
-    window.open("https://www.amazon.es/hz/wishlist/ls/311IHY455T9WA?ref_=wl_share")
+    window.open("https://www.amazon.es/wedding/registry/3P9TM3STHG2PJ ")
 });
 document.getElementById('form',).addEventListener('click', () => {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSdfd6FbgoX3PHxVi7Ush7xkvn8oTgskfZgpBppKB3DInNCUoQ/viewform")
